@@ -1,7 +1,16 @@
 import React from 'react';
+import MainComponent from '../components/shared/MainComponent';
+import { useRouter } from 'next/router';
 
 const Home: React.FC = () => {
-  return <h1>uai rene</h1>
+  const router = useRouter();
+
+  return (
+    <MainComponent>
+      <button onClick={ () => router.push('Auth/Login') }>
+      </button>
+    </MainComponent>
+  )
 }
 
-export default Home
+export default Home;
